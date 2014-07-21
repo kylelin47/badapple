@@ -1,13 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ApartmentHunter\Properties\AndroidManifest.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ApartmentHunter\Apartment.cs">
     <Files>
       <File FileName="ApartmentHunter\MainActivity.cs" Line="1" Column="1" />
       <File FileName="ApartmentHunter\Properties\AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="ApartmentHunter\Apartment.cs" Line="28" Column="5" />
+      <File FileName="ApartmentHunter\Resources\AboutResources.txt" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ApartmentHunter MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
 </Properties>

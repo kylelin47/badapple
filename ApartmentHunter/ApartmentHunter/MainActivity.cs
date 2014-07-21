@@ -16,6 +16,10 @@ namespace ApartmentHunter
 
 		protected override void OnCreate (Bundle bundle)
 		{
+            Apartment GPlace = new Apartment(int [] att = {500, 10});
+            Apartment [] Apartments = {
+                GPlace
+            };
 			base.OnCreate (bundle);
 
 			// Set our view from the "main" layout resource
