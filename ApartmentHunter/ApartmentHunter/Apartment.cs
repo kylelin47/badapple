@@ -28,22 +28,34 @@ namespace ApartmentHunter
 	public class Apartment
 	{
 		private int[] attributes;
+        private string name;
 
-		public Apartment (int[] attributes)
+		public Apartment (int[] attributes, string name)
 		{
 			/*price, mile from campus*/
 			this.attributes = attributes;
+            this.name = name;
 		}
 
-		public void setAttribute(int newValue, string attribute)
+		public void setAttribute(string attribute, int newValue)
 		{
 			attributes [Dictionaries.getValue(attribute)] = newValue;
 		}
         
+        public void setName(string newName)
+        {
+            this.name = name;
+        }
+        
         public int getAttribute(string attribute)
         {
             return attributes [Dictionaries.getValue(attribute)];
-        }  
+        }
+        
+        public string getName()
+        {
+            return name;
+        }
 	}
     
     public class ApartmentSorter
