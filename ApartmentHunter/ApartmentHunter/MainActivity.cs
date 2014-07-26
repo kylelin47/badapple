@@ -16,9 +16,11 @@ namespace ApartmentHunter
 
 		protected override void OnCreate (Bundle bundle)
 		{
-            Apartment GPlace = new Apartment(int [] att = {500, 10});
-            Apartment [] Apartments = {
-                GPlace
+			Apartment GPlace = new Apartment (500, 10, "Gainesville Place");
+			Apartment Estates = new Apartment (300, 5, "The Estates");
+			Apartment [] Apartments = new Apartment []{
+				GPlace,
+				Estates
             };
 			base.OnCreate (bundle);
 
