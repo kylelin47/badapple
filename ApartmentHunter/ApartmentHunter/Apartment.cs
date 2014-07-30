@@ -29,17 +29,17 @@ namespace ApartmentHunter
 
 	public class Apartment
 	{
-		private int[] attributes;
+		private int[] attributes = new int[5];
         private string name;
 
-		public Apartment (int[] attributes, string name)
+		public Apartment (string name, int[] attributes)
 		{
 			/*price, mile from campus*/
 			this.attributes = attributes;
             this.name = name;
 		}
         
-        public Apartment (int price, int distance, string name)
+        public Apartment (string name, int price, int distance)
         {
             attributes[0] = price;
             attributes[1] = distance;
@@ -56,8 +56,12 @@ namespace ApartmentHunter
             this.name = name;
         }
         
-        public int getAttribute(string attribute)
+        public IComparable getAttribute(string attribute)
         {
+            if (attribute == "name")
+            {
+                return name;
+            }
             return attributes [Dictionaries.getValue(attribute)];
         }
         
@@ -76,25 +80,23 @@ namespace ApartmentHunter
 
         public void sort(Apartment[] apartments, string sortBy, int left, int right)
 		{
-            //use IComparable for more generalized. Might implement later
             int i = left, j = right;
-            int pivot = apartments[(left + right) / 2].getAttribute(sortBy);
- 
+
+            IComparable pivot = apartments[(left + right) / 2].getAttribute(sortBy);
+
             while (i <= j)
             {
-                while (apartments[i].getAttribute(sortBy) < pivot)
+                while (apartments[i].getAttribute(sortBy).CompareTo(pivot) < 0)
                 {
                     i++;
                 }
  
-                while (apartments[j].getAttribute(sortBy) > pivot)
+                while (apartments[j].getAttribute(sortBy).CompareTo(pivot) > 0)
                 {
                     j--;
                 }
- 
                 if (i <= j)
                 {
-                    // Swap
                     Apartment tmp = apartments[i];
                     apartments[i] = apartments[j];
                     apartments[j] = tmp;

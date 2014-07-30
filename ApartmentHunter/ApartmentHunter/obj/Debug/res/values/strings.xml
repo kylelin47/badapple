@@ -1,1 +1,1 @@
-<resources><string name="hello">Hello World, Click Me!</string><string name="app_name">ApartmentHunter</string></resources>
+<resources><string name="hello">Hello World, Click Me!</string><string name="app_name">ApartmentHunter</string><string name="sort_prompt">Sort By:</string><string-array name="attributes_array"><item>Name</item><item>Price</item><item>Distance from Campus</item></string-array></resources>

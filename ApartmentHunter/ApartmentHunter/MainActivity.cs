@@ -12,28 +12,35 @@ namespace ApartmentHunter
 	[Activity (Label = "ApartmentHunter", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
-
 		protected override void OnCreate (Bundle bundle)
 		{
-			Apartment GPlace = new Apartment (500, 10, "Gainesville Place");
-			Apartment Estates = new Apartment (300, 5, "The Estates");
-			Apartment [] Apartments = new Apartment []{
+			Apartment GPlace = new Apartment ("Gainesville Place", 500, 10);
+			Apartment Estates = new Apartment ("The Estates", 300, 5);
+			Apartment[] Apartments = new Apartment [] {
 				GPlace,
 				Estates
-            };
+			};
 			base.OnCreate (bundle);
 
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
-			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", count++);
-			};
+			Spinner spinner = FindViewById<Spinner> (Resource.Id.spinner);
+
+			spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs> (spinner_ItemSelected);
+			var adapter = ArrayAdapter.CreateFromResource (
+				              this, Resource.Array.attributes_array, Android.Resource.Layout.SimpleSpinnerItem);
+
+			adapter.SetDropDownViewResource (Android.Resource.Layout.SimpleSpinnerDropDownItem);
+			spinner.Adapter = adapter;
+		}
+
+		private void spinner_ItemSelected (object sender, AdapterView.ItemSelectedEventArgs e)
+		{
+			Spinner spinner = (Spinner)sender;
+
+			string toast = string.Format ("The attribute is {0}", spinner.GetItemAtPosition (e.Position));
+			Toast.MakeText (this, toast, ToastLength.Long).Show ();
 		}
 	}
 }

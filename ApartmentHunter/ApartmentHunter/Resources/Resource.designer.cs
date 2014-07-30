@@ -28,6 +28,22 @@ namespace ApartmentHunter
 		{
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int attributes_array = 2131034112;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -60,8 +76,8 @@ namespace ApartmentHunter
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int myButton = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int spinner = 2131099648;
 			
 			static Id()
 			{
@@ -97,6 +113,9 @@ namespace ApartmentHunter
 			
 			// aapt resource value: 0x7f040000
 			public const int hello = 2130968576;
+			
+			// aapt resource value: 0x7f040002
+			public const int sort_prompt = 2130968578;
 			
 			static String()
 			{
