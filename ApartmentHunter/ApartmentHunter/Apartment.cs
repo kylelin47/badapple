@@ -9,8 +9,8 @@ namespace ApartmentHunter
     {
         static Dictionary<string, int> dictAttributes = new Dictionary<string, int>()
         {
-            {"price", 0},
-            {"distance", 1},
+            {"Price", 0},
+			{"Distance from Campus", 1},
         };
         public static int getValue(string value)
         {
