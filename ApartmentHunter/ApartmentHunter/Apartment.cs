@@ -61,7 +61,7 @@ namespace ApartmentHunter
         
         public IComparable getAttribute(string attribute)
         {
-            if (attribute == "name")
+			if (attribute == "name" || attribute == "Name")
             {
                 return name;
             }

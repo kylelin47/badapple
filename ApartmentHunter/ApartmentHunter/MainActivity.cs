@@ -48,9 +48,13 @@ namespace ApartmentHunter
 
 			string toast = string.Format ("The attribute is {0}", spinner.GetItemAtPosition (e.Position));
 			Toast.MakeText (this, toast, ToastLength.Long).Show ();
-			String sortBy = (String)spinner.GetItemAtPosition (e.Position);
+
 			ApartmentSorter sorter = new ApartmentSorter ();
+			String sortBy = (String)spinner.GetItemAtPosition (e.Position);
 			sorter.sort (Apartments, sortBy, 0, Apartments.Length - 1);
+
+			ListView myListView = FindViewById<ListView> (Resource.Id.List);
+			((MainAdapter)myListView.Adapter).NotifyDataSetChanged ();
 		}
 
 		void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
