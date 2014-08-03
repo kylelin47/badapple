@@ -12,8 +12,8 @@ namespace ApartmentHunter
 	[Activity (Label = "ApartmentHunter", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
-		static Apartment GPlace = new Apartment ("Gainesville Place", 500, 10);
-		static Apartment Estates = new Apartment ("The Estates", 300, 5);
+		static Apartment GPlace = new Apartment ("Gainesville Place", 500, 10, 2130837504);
+		static Apartment Estates = new Apartment ("The Estates", 300, 5, 2130837504);
 		Apartment[] Apartments = new Apartment [] {
 			GPlace,
 			Estates
@@ -34,6 +34,12 @@ namespace ApartmentHunter
 
 			adapter.SetDropDownViewResource (Android.Resource.Layout.SimpleSpinnerDropDownItem);
 			spinner.Adapter = adapter;
+
+			ListView listView;
+			listView = FindViewById<ListView>(Resource.Id.List); // get reference to the ListView in the layout
+			// populate the listview with data
+			listView.Adapter = new MainAdapter(this, Apartments);
+			listView.ItemClick += OnListItemClick;
 		}
 
 		private void spinner_ItemSelected (object sender, AdapterView.ItemSelectedEventArgs e)
@@ -45,6 +51,13 @@ namespace ApartmentHunter
 			String sortBy = (String)spinner.GetItemAtPosition (e.Position);
 			ApartmentSorter sorter = new ApartmentSorter ();
 			sorter.sort (Apartments, sortBy, 0, Apartments.Length - 1);
+		}
+
+		void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
+		{
+			var listView = sender as ListView;
+			var t = Apartments[e.Position];
+			Android.Widget.Toast.MakeText(this, (String) t.getAttribute("name"), Android.Widget.ToastLength.Short).Show();
 		}
 	}
 }

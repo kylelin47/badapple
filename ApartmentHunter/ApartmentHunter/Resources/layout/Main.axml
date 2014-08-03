@@ -14,4 +14,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:prompt="@string/sort_prompt" />
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/List" />
 </LinearLayout>

@@ -31,18 +31,21 @@ namespace ApartmentHunter
 	{
 		private int[] attributes = new int[5];
         private string name;
+		public int ImageResourceId;
 
-		public Apartment (string name, int[] attributes)
+		public Apartment (string name, int[] attributes, int ImageResourceId)
 		{
 			/*price, mile from campus*/
 			this.attributes = attributes;
             this.name = name;
+			this.ImageResourceId = ImageResourceId;
 		}
         
-        public Apartment (string name, int price, int distance)
+		public Apartment (string name, int price, int distance, int ImageResourceId)
         {
             attributes[0] = price;
             attributes[1] = distance;
+			this.ImageResourceId = ImageResourceId;
             this.name = name;
         }
 
