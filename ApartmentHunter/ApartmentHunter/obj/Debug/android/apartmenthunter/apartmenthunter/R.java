@@ -18,17 +18,19 @@ public final class R {
         public static final int icon=0x7f020001;
     }
     public static final class id {
+        public static final int Button1=0x7f060004;
         public static final int Heading=0x7f060001;
-        public static final int Image=0x7f060004;
-        public static final int List=0x7f060006;
+        public static final int Image=0x7f060005;
+        public static final int List=0x7f060007;
         public static final int Text=0x7f060000;
         public static final int Text1=0x7f060002;
         public static final int Text2=0x7f060003;
-        public static final int spinner=0x7f060005;
+        public static final int spinner=0x7f060006;
     }
     public static final class layout {
         public static final int customview=0x7f030000;
-        public static final int main=0x7f030001;
+        public static final int expandedapartment=0x7f030001;
+        public static final int main=0x7f030002;
     }
     public static final class string {
         public static final int app_name=0x7f040000;

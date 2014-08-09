@@ -24,6 +24,10 @@ namespace ApartmentHunter
 			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
+		public static void UpdateIdValues()
+		{
+		}
+		
 		public partial class Array
 		{
 			
@@ -75,14 +79,17 @@ namespace ApartmentHunter
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f060004
+			public const int Button1 = 2131099652;
+			
 			// aapt resource value: 0x7f060001
 			public const int Heading = 2131099649;
 			
-			// aapt resource value: 0x7f060004
-			public const int Image = 2131099652;
+			// aapt resource value: 0x7f060005
+			public const int Image = 2131099653;
 			
-			// aapt resource value: 0x7f060006
-			public const int List = 2131099654;
+			// aapt resource value: 0x7f060007
+			public const int List = 2131099655;
 			
 			// aapt resource value: 0x7f060000
 			public const int Text = 2131099648;
@@ -93,8 +100,8 @@ namespace ApartmentHunter
 			// aapt resource value: 0x7f060003
 			public const int Text2 = 2131099651;
 			
-			// aapt resource value: 0x7f060005
-			public const int spinner = 2131099653;
+			// aapt resource value: 0x7f060006
+			public const int spinner = 2131099654;
 			
 			static Id()
 			{
@@ -113,7 +120,10 @@ namespace ApartmentHunter
 			public const int CustomView = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
+			public const int ExpandedApartment = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int Main = 2130903042;
 			
 			static Layout()
 			{

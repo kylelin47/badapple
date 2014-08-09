@@ -46,6 +46,13 @@ namespace ApartmentHunter
 																   item.getAttribute ("Distance from Campus").ToString() +
 																   " miles";
 			view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(item.ImageResourceId);
+
+			Button b = view.FindViewById<Button> (Resource.Id.Button1);
+			b.Click += (sender, e) => {
+				var intent = new Intent (context, typeof(ExpandedApartmentActivity));
+				intent.PutExtra ("name", item.getName ());
+				context.StartActivity (intent);
+			};
 			return view;
 		}
 	}
