@@ -24,10 +24,6 @@ namespace ApartmentHunter
 			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
-		public static void UpdateIdValues()
-		{
-		}
-		
 		public partial class Array
 		{
 			
@@ -79,23 +75,26 @@ namespace ApartmentHunter
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060003
-			public const int Image = 2131099651;
+			// aapt resource value: 0x7f060001
+			public const int Heading = 2131099649;
 			
-			// aapt resource value: 0x7f060005
-			public const int List = 2131099653;
+			// aapt resource value: 0x7f060004
+			public const int Image = 2131099652;
+			
+			// aapt resource value: 0x7f060006
+			public const int List = 2131099654;
 			
 			// aapt resource value: 0x7f060000
 			public const int Text = 2131099648;
 			
-			// aapt resource value: 0x7f060001
-			public const int Text1 = 2131099649;
-			
 			// aapt resource value: 0x7f060002
-			public const int Text2 = 2131099650;
+			public const int Text1 = 2131099650;
 			
-			// aapt resource value: 0x7f060004
-			public const int spinner = 2131099652;
+			// aapt resource value: 0x7f060003
+			public const int Text2 = 2131099651;
+			
+			// aapt resource value: 0x7f060005
+			public const int spinner = 2131099653;
 			
 			static Id()
 			{

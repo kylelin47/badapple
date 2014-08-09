@@ -46,9 +46,6 @@ namespace ApartmentHunter
 		{
 			Spinner spinner = (Spinner)sender;
 
-			string toast = string.Format ("The attribute is {0}", spinner.GetItemAtPosition (e.Position));
-			Toast.MakeText (this, toast, ToastLength.Long).Show ();
-
 			ApartmentSorter sorter = new ApartmentSorter ();
 			String sortBy = (String)spinner.GetItemAtPosition (e.Position);
 			sorter.sort (Apartments, sortBy, 0, Apartments.Length - 1);

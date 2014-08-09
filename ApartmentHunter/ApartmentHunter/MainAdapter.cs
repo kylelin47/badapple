@@ -39,8 +39,12 @@ namespace ApartmentHunter
 			View view = convertView;
 			if (view == null) // no view to re-use, create new
 				view = context.LayoutInflater.Inflate(Resource.Layout.CustomView, null);
-			view.FindViewById<TextView>(Resource.Id.Text1).Text = item.getAttribute("Price").ToString();
-			view.FindViewById<TextView> (Resource.Id.Text2).Text = item.getAttribute ("Distance from Campus").ToString();
+
+			view.FindViewById<TextView>(Resource.Id.Heading).Text = item.getAttribute("Name").ToString();
+			view.FindViewById<TextView>(Resource.Id.Text1).Text = "Price: $" + item.getAttribute("Price").ToString();
+			view.FindViewById<TextView> (Resource.Id.Text2).Text = "Distance: " +
+																   item.getAttribute ("Distance from Campus").ToString() +
+																   " miles";
 			view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(item.ImageResourceId);
 			return view;
 		}

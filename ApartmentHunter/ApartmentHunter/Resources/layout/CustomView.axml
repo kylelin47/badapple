@@ -11,24 +11,33 @@
         android:layout_height="wrap_content"
         android:paddingLeft="10dip">
         <TextView
+            android:id="@+id/Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF7F3300"
+            android:textSize="20dip"
+            android:text="Heading" />
+        <TextView
             android:id="@+id/Text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FF7F3300"
             android:textSize="20dip"
-            android:textStyle="italic" />
+            android:paddingLeft="10dip"
+            android:text="Price" />
         <TextView
             android:id="@+id/Text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14dip"
+            android:textSize="20dip"
+            android:text="Distance"
             android:textColor="#FF267F00"
-            android:paddingLeft="100dip" />
+            android:paddingLeft="10dip" />
     </LinearLayout>
     <ImageView
         android:id="@+id/Image"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
         android:padding="5dp"
         android:src="@drawable/icon"
         android:layout_alignParentRight="true" />
