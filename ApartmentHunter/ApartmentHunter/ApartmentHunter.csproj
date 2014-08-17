@@ -67,5 +67,10 @@
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Resources\raw\" />
+    <Folder Include="Assets\Descriptions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Descriptions\GainesvillePlace.txt" />
+    <AndroidAsset Include="Assets\Descriptions\TheEstates.txt" />
   </ItemGroup>
 </Project>

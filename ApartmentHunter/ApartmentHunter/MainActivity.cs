@@ -12,11 +12,16 @@ namespace ApartmentHunter
 	[Activity (Label = "ApartmentHunter", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
-		static Apartment GPlace = new Apartment ("Gainesville Place", 500, 10, 2130837504);
-		static Apartment Estates = new Apartment ("The Estates", 300, 5, 2130837504);
+		static Apartment GPlace = new Apartment ("Gainesville Place", 480, 10, 2130837504);
+		static Apartment Estates = new Apartment ("The Estates", 550, 7, 2130837504);
+		static Apartment CClub = new Apartment ("Campus Club", 330, 3, 2130837504);
+		static Apartment Keys = new Apartment ("Keys", 600, 4, 2130837504);
+
 		Apartment[] Apartments = new Apartment [] {
 			GPlace,
-			Estates
+			Estates,
+			CClub,
+			Keys
 		};
 
 		protected override void OnCreate (Bundle bundle)
@@ -62,5 +67,3 @@ namespace ApartmentHunter
 		}
 	}
 }
-
-

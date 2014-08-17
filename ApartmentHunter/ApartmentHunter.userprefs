@@ -2,9 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ApartmentHunter\MainAdapter.cs">
     <Files>
-      <File FileName="ApartmentHunter\MainActivity.cs" Line="42" Column="42" />
-      <File FileName="ApartmentHunter\MainAdapter.cs" Line="58" Column="58" />
-      <File FileName="ApartmentHunter\ExpandedApartmentActivity.cs" Line="58" Column="58" />
+      <File FileName="ApartmentHunter\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="ApartmentHunter\MainAdapter.cs" Line="32" Column="32" />
+      <File FileName="ApartmentHunter\ExpandedApartmentActivity.cs" Line="24" Column="24" />
+      <File FileName="ApartmentHunter\Apartment.cs" Line="86" Column="86" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

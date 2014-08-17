@@ -48,12 +48,18 @@ namespace ApartmentHunter
 			view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(item.ImageResourceId);
 
 			Button b = view.FindViewById<Button> (Resource.Id.Button1);
-			b.Click += (sender, e) => {
-				var intent = new Intent (context, typeof(ExpandedApartmentActivity));
-				intent.PutExtra ("name", item.getName ());
-				context.StartActivity (intent);
-			};
+			b.Tag = position;
+			b.Click -= SwitchScreen;
+			b.Click += SwitchScreen;
 			return view;
+		}
+		void SwitchScreen (object sender, EventArgs e)
+		{
+			int position = (int)((Button)sender).Tag;
+			var item = items [position];
+			var intent = new Intent (context, typeof(ExpandedApartmentActivity));
+			intent.PutExtra ("name", item.getName ());
+			context.StartActivity (intent);
 		}
 	}
 }
